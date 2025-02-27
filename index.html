@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables de Pique-Nique - E-Products France SARL</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header wood-grain">
+        <nav class="nav container">
+            <a href="#" class="logo">E-Products France</a>
+            <a href="#contact" class="nav-button">Contactez-nous</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content animate">
+            <h1 class="hero-title">Tables de Pique-Nique</h1>
+            <p class="hero-subtitle">Mobilier en bois de qualité pour vos moments en extérieur</p>
+            <a href="#products" class="hero-button">Découvrez nos produits</a>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title animate">Nos Tables de Pique-Nique</h2>
+            <div class="products-grid">
+                <!-- Product 1: KING 140 cm -->
+                <div class="product-card animate" onclick="showOrderForm('KING Table de pique-nique 1.40m', '259.95')">
+                    <img src="https://myshop.s3-external-3.amazonaws.com/shop2117100.pictures.K140_400.jpg" alt="KING Table de pique-nique 1.40m">
+                    <h3>KING Table de pique-nique 1.40m</h3>
+                    <p>Pour 4 personnes - Bois imprégné</p>
+                    <span class="price">259,95 €</span>
+                </div>
+                <!-- Product 2: KING 180 cm -->
+                <div class="product-card animate" onclick="showOrderForm('KING Table de pique-nique 1.80m', '279.95')">
+                    <img src="https://myshop.s3-external-3.amazonaws.com/shop2117100.pictures.K180basic400.jpg" alt="KING Table de pique-nique 1.80m">
+                    <h3>KING Table de pique-nique 1.80m</h3>
+                    <p>Pour 6 personnes - Bois imprégné</p>
+                    <span class="price">279,95 €</span>
+                </div>
+                <!-- Product 3: KING 240 cm -->
+                <div class="product-card animate" onclick="showOrderForm('KING Table de pique-nique 2.40m', '349.95')">
+                    <img src="https://myshop.s3-external-3.amazonaws.com/shop2117100.pictures.K240_400.jpg" alt="KING Table de pique-nique 2.40m">
+                    <h3>KING Table de pique-nique 2.40m</h3>
+                    <p>Pour 8+ personnes - Bois imprégné</p>
+                    <span class="price">349,95 €</span>
+                </div>
+                <!-- Product 4: ALEX 180 cm -->
+                <div class="product-card animate" onclick="showOrderForm('ALEX Table de pique-nique 180cm', '299.95')">
+                    <img src="https://www.kingpicknicktafels.be/foto/alex-800-1_800x800.jpg" alt="ALEX Table de pique-nique 180cm">
+                    <h3>ALEX Table de pique-nique 180cm</h3>
+                    <p>Pour 6 personnes - 42mm robuste</p>
+                    <span class="price">299,95 €</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title animate">Contactez-nous</h2>
+            <div class="contact-grid">
+                <div class="contact-info animate">
+                    <h3>Informations Légales</h3>
+                    <p><strong>E-Products France SARL</strong><br>
+                    7 chemin des Filatiers<br>
+                    62223 SAINTE CATHERINE</p>
+                    <p>TVA: FR 25 818931396<br>
+                    SIREN: 818 931 396<br>
+                    SIRET: 818 931 396 00019</p>
+                </div>
+                <div class="contact-info animate">
+                    <h3>Coordonnées Bancaires</h3>
+                    <p><strong>Email:</strong> contact@tablesdepiquenique.fr<br>
+                    <strong>Site web:</strong> www.tablesdepiquenique.fr</p>
+                    <p><strong>BIC:</strong> CMCIFRPPXXX<br>
+                    <strong>IBAN:</strong> FR76 3002 7175 3300 0201 2100 116</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta wood-grain">
+        <div class="container animate">
+            <h2>Commandez Aujourd'hui</h2>
+            <p>Transformez vos espaces extérieurs avec nos tables de pique-nique durables</p>
+            <a href="#products" class="hero-button">Voir la collection</a>
+        </div>
+    </section>
+
+    <!-- Order Form Modal -->
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeOrderForm()">&times;</span>
+            <h2>Commander un produit</h2>
+            <form id="order-form" action="mailto:contact@tablesdepiquenique.fr" method="post" enctype="text/plain">
+                <label for="product">Produit:</label>
+                <input type="text" id="product" name="product" readonly>
+                <label for="price">Prix (€):</label>
+                <input type="text" id="price" name="price" readonly>
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="address">Adresse de livraison:</label>
+                <textarea id="address" name="address" required></textarea>
+                <button type="submit">Envoyer la commande</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h4>E-Products France SARL</h4>
+                    <p>Qualité et durabilité pour vos espaces extérieurs.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <h4>Contact</h4>
+                    <p>Email: contact@tablesdepiquenique.fr</p>
+                    <p>Adresse: 7 chemin des Filatiers,<br>62223 SAINTE CATHERINE</p>
+                </div>
+                <div class="footer-info">
+                    <h4>Informations</h4>
+                    <p>TVA: FR 25 818931396</p>
+                    <p>SIRET: 818 931 396 00019</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 E-Products France SARL. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showOrderForm(productName, price) {
+            document.getElementById('order-modal').style.display = 'block';
+            document.getElementById('product').value = productName;
+            document.getElementById('price').value = price;
+        }
+
+        function closeOrderForm() {
+            document.getElementById('order-modal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('order-modal')) {
+                closeOrderForm();
+            }
+        }
+    </script>
+</body>
+</html>
